@@ -18,6 +18,7 @@ export class TeamController {
   @Get('in-league')
   async getAllTeamsInLeague(@Query('league') league: string) {
     const teams = await this.teamService.getAllTeamsInLeague(league);
+    console.log({ teams });
     return teams;
   }
   @Get(':id')
